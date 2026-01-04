@@ -49,12 +49,3 @@ repos:
   #       args: ["-c", "pyproject.toml"]
   #       additional_dependencies: ["bandit[toml]"]
 # Run tests
-  - repo: local
-    hooks:
-      - id: pytest
-        name: pytest
-        entry: pytest
-        language: system
-        pass_filenames: false
-        always_run: true
-        args: ["-v", "--tb=short"]

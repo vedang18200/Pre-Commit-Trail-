@@ -161,3 +161,6 @@ exclude_lines = [
     "@abstractmethod",
     "@abc.abstractmethod",
 ]
+
+[tool.coverage.html]
+directory = "htmlcov"
