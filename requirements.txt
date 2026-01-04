@@ -1,0 +1,29 @@
+# requirements-dev.txt - Development dependencies
+
+# Pre-commit
+pre-commit>=3.5.0
+
+# Code formatting
+black>=23.12.1
+isort>=5.13.2
+
+# Linting
+ruff>=0.1.9
+
+# Type checking
+mypy>=1.8.0
+
+# Security checking (if you uncomment bandit in pre-commit)
+# bandit[toml]>=1.7.6
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-asyncio>=0.21.0
+
+# FastAPI testing
+httpx>=0.24.0
+
+# Optional: Additional testing tools
+pytest-mock>=3.12.0
+faker>=20.0.0

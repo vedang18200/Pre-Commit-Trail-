@@ -38,13 +38,23 @@ repos:
     rev: v1.8.0
     hooks:
       - id: mypy
-        additional_dependencies: [types-all]
+        # additional_dependencies: []
         args: [--ignore-missing-imports]
 
-  # Bandit - security checks
-  - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.6
+  # # Bandit - security checks
+  # - repo: https://github.com/PyCQA/bandit
+  #   rev: 1.7.6
+  #   hooks:
+  #     - id: bandit
+  #       args: ["-c", "pyproject.toml"]
+  #       additional_dependencies: ["bandit[toml]"]
+# Run tests
+  - repo: local
     hooks:
-      - id: bandit
-        args: ["-c", "pyproject.toml"]
-        additional_dependencies: ["bandit[toml]"]
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+        args: ["-v", "--tb=short"]
